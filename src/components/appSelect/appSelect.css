@@ -1,0 +1,59 @@
+.app__select {
+  position: relative;
+  display: inline-block;
+}
+
+.select__container {
+  width: 170px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.select__container.open {
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+}
+
+input[type="text"] {
+  padding: 8px 12px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  outline: none;
+}
+
+.options__container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 100%;
+  left: 0;
+  width: 99%;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1, );
+  background-color: rgba(240, 248, 255, 0.699);
+  z-index: 1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: #f0f0f0;
+}
+
+li:last-child {
+  border-radius: 0 0 12px 12px;
+}

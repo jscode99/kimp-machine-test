@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+// Nested Component
+import AppSelect from "./components/appSelect";
+import "./App.css";
 
 function App() {
+  const [selectedValue, setSelectedValue] = useState<string>("");
+  const options = [
+    "Option1",
+    "Option2",
+    "Option3",
+    "Option4",
+    "Option5",
+    "Option6",
+  ];
+
+  const onOptionChangeHandler = (value: string) => {
+    setSelectedValue(value);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Kimp Test</h1>
+      <h2>Create a reuseable select component using react and typescript</h2>
+
+      <AppSelect
+        options={options}
+        selectedValue={selectedValue}
+        onOptionChange={onOptionChangeHandler}
+      />
     </div>
   );
 }
