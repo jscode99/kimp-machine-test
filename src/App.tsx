@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <h1>Kimp Test</h1>
       <h2>Create a reuseable select component using react and typescript</h2>
-
+      <h3>Selected value : {selectedValue || 'Not selected.'}</h3>
       <AppSelect
         options={options}
         selectedValue={selectedValue}
