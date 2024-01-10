@@ -39,6 +39,11 @@ input[type="text"] {
   z-index: 1;
 }
 
+.no__options {
+  margin: 10px;
+  color: grey;
+}
+
 ul {
   list-style: none;
   padding: 0;

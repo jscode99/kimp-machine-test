@@ -85,7 +85,11 @@ export default function AppSelect({
                 {optionItem}
               </li>
             ))}
-            {!filteredOptions ? <span>No option available.</span> : false}
+            {filteredOptions.length === 0 ? (
+              <div className="no__options">No options available.</div>
+            ) : (
+              false
+            )}
           </ul>
         </div>
       )}
