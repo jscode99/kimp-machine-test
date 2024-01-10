@@ -13,7 +13,7 @@ export default function AppSelect({
   selectedValue,
   onOptionChange,
 }: ISelectOptionProps) {
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const [filteredOptions, setFilteredOptions] = useState<string[]>(options);
   const inputRef = useRef<HTMLInputElement>(null);
   const selectRef = useRef<HTMLDivElement>(null);
